@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css">
+   <title> my music app</title>
+  </head>
+  <body>
+  <header>
+    <nav class="navbar navbar-light bg-primary">
+      <style>
+        .bg-primary {
+          background-color: #000080a7 !important;
+        }
+      </style>
+      <div class="container-fluid d-flex justify-content-between align-items-center">
+        <!-- Logo -->
+        <div>
+          <img src="./img/effizy-Logo (2).png" alt="Logo" class="img-fluid" style="width: 50px; height: auto;">
+        </div>
+    
+        <!-- Buttons Section -->
+        <form class="d-flex">
+          <button class="btn btn-outline-success me-2" type="button" style="color: rgb(255, 255, 255);">Register</button>
+          <button class="btn btn-sm btn-outline-secondary" type="button" style="color: rgb(255, 255, 255);">Sign in</button>
+        </form>
+      </div>
+    </nav>    
+  </header>
+  <main>
+    <div class="card mb-3" style="max-width: 1540px; height: 500px;">
+      <div class="row g-0 h-100">
+        <!-- Sidebar with Buttons -->
+        <div class="col-md-2 d-flex flex-column align-items-start p-3 bg-light">
+          <style>
+            .btn-primary {
+              background-color: #000080a7 !important;
+              height: auto;
+              width: 160px;
+              align-items: center;
+              justify-content: center;
+            }
+          </style>
+          <a href="#" class="btn btn-primary mb-2" onclick="showContent('Setting')">Setting</a>
+          <a href="#" class="btn btn-primary mb-3" onclick="showContent('Music')">Music</a>
+          <a href="#" class="btn btn-primary mb-3" onclick="showContent('Video')">Video</a>
+          <a href="#" class="btn btn-primary mb-2" onclick="showContent('Picture')">Picture</a>
+          <a href="#" class="btn btn-primary mb-2" onclick="showContent('Artist')">Artist</a>
+        </div>
+        <div class="col-md-10 container-bg ">
+          <style>
+            .container-bg{
+              background-color: #06060ba7 !important;
+              color: beige;
+              align-items: center;
+              justify-content: center;
+            }
+          </style>
+          <div id="content-area" class="card-body h-100 d-flex flex-column justify-content-center">
+            <h5 class="card-title">Welcome</h5>
+            <p class="card-text">
+              Click on the buttons in the sidebar to display the relevant content here.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- JavaScript -->
+    <script>
+      function showContent(section) {
+        const contentArea = document.getElementById('content-area');
+        let content = '';
+  
+        // Update content based on the section clicked
+        switch (section) {
+          case 'Setting':
+            content = `
+              <h5 class="card-title">Settings</h5>
+              <p class="card-text">Here you can adjust your application settings.</p>
+            `;
+            break;
+          case 'Music':
+            content = `
+              <h5 class="card-title">Music</h5>
+              <p class="card-text">Explore and listen to your favorite tracks.</p>
+            `;
+            break;
+          case 'Video':
+            content = `
+              <h5 class="card-title">Video</h5>
+              <p class="card-text">Watch and enjoy your video content.</p>
+            `;
+            break;
+          case 'Picture':
+            content = `
+              <h5 class="card-title">Picture</h5>
+              <p class="card-text">View and manage your photo collection.</p>
+            `;
+            break;
+          case'Artist':
+            content = `
+              <h5 class="card-title">Artist</h5>
+              <p class="card-text">View and manage your favorite Artist collection.</p>
+            `;
+            break;
+          default:
+            content = `
+              <h5 class="card-title">Welcome</h5>
+              <p class="card-text">Click on the buttons in the sidebar to display the relevant content here.</p>
+            `;
+        }
+        contentArea.innerHTML = content;
+      }
+    </script>
+  </main>
+    // <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>

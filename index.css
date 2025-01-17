@@ -1,0 +1,61 @@
+ /* Media Queries for responsiveness */
+ @media (max-width: 1200px) {
+    /* On medium screens, reduce sidebar width */
+    .col-md-2 {
+      width: 25%;
+    }
+
+    .col-md-10 {
+      width: 75%;
+    }
+  }
+
+  @media (max-width: 992px) {
+    /* On tablets or smaller screens */
+    .col-md-2 {
+      width: 40%;
+    }
+
+    .col-md-10 {
+      width: 60%;
+    }
+
+    /* Sidebar buttons - Make them full width */
+    .btn-primary {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    /* On smaller tablets and phones */
+    .col-md-2 {
+      width: 100%; /* Sidebar takes full width */
+      margin-bottom: 10px;
+    }
+
+    .col-md-10 {
+      width: 100%; /* Main content takes full width */
+    }
+
+    /* Ensure the buttons are full width on small devices */
+    .btn-primary {
+      width: 100%;
+    }
+
+    .card-body {
+      padding: 15px; /* Adjust padding for smaller devices */
+    }
+  }
+
+  @media (max-width: 576px) {
+    /* On extra small screens (like phones in portrait mode) */
+    .btn-primary {
+      width: 100%; /* Buttons are full width */
+      font-size: 14px; /* Smaller text */
+    }
+
+    /* Adjust card for smaller screens */
+    .card-body {
+      padding: 10px;
+    }
+  }
